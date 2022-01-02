@@ -1,2 +1,2 @@
-env: flex
+env: google.devtools.cloudbuild.v1.Build
 runtime: aspnetcore
