@@ -1,1 +1,4 @@
 
+steps:
+- name: 'gcr.io/$PROJECT_ID/gcloud'
+  args: ['builds', 'list']
