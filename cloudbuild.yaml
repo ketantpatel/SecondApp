@@ -1,3 +1,5 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/donnetsecondapp/dotnetsecondapp', '.']
+  args: ['build', '--tag=gcloud-slim', '--tag=gcr.io/donnetsecondapp/gcloud-slim', '-f', 'Dockerfile.slim', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '--tag=gcr.io/donnetsecondapp/gcloud', '-f', 'Dockerfile', '.']
