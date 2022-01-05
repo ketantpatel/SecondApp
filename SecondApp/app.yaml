@@ -1,2 +1,2 @@
-runtime: aspnetcore31
-env: flex
+env:flex
+runtime:aspnetcore
