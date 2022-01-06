@@ -1,4 +1,9 @@
 steps:
+- name: 'mcr.microsoft.com/dotnet/core/sdk:3.1'
+  entrypoint: 'dotnet'
+  args: [ 'publish', '-c', 'Release' ]
+  dir: 'SecondApp'
+  
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['app','deploy','SecondApp/bin/Release/netcoreapp3.1/publish/app.yaml', '--verbosity=debug']
 timeout: '1200s'
